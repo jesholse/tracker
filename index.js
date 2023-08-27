@@ -24,18 +24,6 @@ const thieves = [
     id: 8400488,
   },
   {
-    name: "Kevin Bartholomew",
-    id: 1264810,
-  },
-  {
-    name: "Nicolas Tacco",
-    id: 9664191,
-  },
-  {
-    name: " YurtsuzJohn",
-    id: 9357603,
-  },
-  {
     name: "FLD1987",
     id: 8527862,
   },
