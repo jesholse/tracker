@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+p {
+  margin-bottom: 0;
+}
+body {
+  background-color: #eee;
+}
+td {
+  padding: 0.5rem !important;
+}
+
+th {
+  padding: 1rem !important;
+}
+
+.root {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1200px;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  align-items: start;
+}
+
+.target {
+  background-color: #f9acac !important;
+}
+
+td,
+th {
+  border: none !important;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+
+table {
+  margin-bottom: 0 !important;
+}
+td {
+  white-space: nowrap;
+  max-width: fit-content;
+  display: inline-block;
+}
+.table-shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+header {
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0 !important;
+  width: 100%;
+}
+
+.card {
+  border: none;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ */
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+main {
+  min-width: 1200px;
+  width: 100%;
+}
+
+aside {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 300px;
+}
+
+td:nth-child(1) {
+  min-width: 200px;
+  display: inline-block;
+}
+
+.table-shadow tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+.table-shadow tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.table-shadow td {
+  padding: 1rem !important;
+}
+
+.table-shadow tr:nth-child(1) {
+  /*background-color: #dedede;
+  background-color: #e67a6f;*/
+}
+
+.table-shadow tr td a {
+  text-decoration: none;
+}
+
+#battlesFound {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#battlesFound a {
+  text-decoration: none;
+}
+
+.list-battle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.list-battle:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+.thief {
+  background-color: #f8f9fa;
+  font-size: 18px;
+  padding: 1rem;
+}
+
+.thief-container {
+  /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+}
+
+.thieves {
+  width: 20rem;
+}
+
+@media screen and (max-width: 600px) {
+  .root {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  main {
+    min-width: unset;
+  }
+  .thieves {
+    width: 100%;
+  }
+}

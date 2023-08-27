@@ -1,0 +1,57 @@
+
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="css/bootstrap.min.css")
+    link(rel="stylesheet", href="css/style.css")
+    script(type="module" src="javascript/main.js", defer)
+    script(type="module" src="javascript/functions.js", defer)
+    script(src="js/bootstrap.js", defer) 
+  body
+  div(class="page")
+
+    main
+      header(class="h3 bg-light text-dark")= "Do you also hate thieves?"
+      div(class="container-fluid root")
+          div(style="width: 100%;")       
+            if battles.length === 0 
+              div= "No thief has a bh/sh at this moment :( "
+            each t in battles
+              if t.message != 0    
+                div(class="thief-container") 
+                  div(class="thief")=t.name 
+                  each b in t.battles  
+                    div(class="list-battle" style="margin-bottom: 0")
+                      div(style="width: 160px")
+                        a(href=b.link, class="text-primary")= "Battle " + b.id
+                      if b.division === 11
+                        div
+                          img(src="https://wiki.erepublik.com/images/b/b4/Icon_division_Airforce.png", alt="air")
+                      if b.division === 4
+                        div
+                          img(src="https://wiki.erepublik.com/images/b/be/Icon_division_4.png", alt="division 4")  
+                      if b.division === 3
+                        div
+                          img(src="https://wiki.erepublik.com/images/5/5b/Icon_division_3.png", alt="division 3")
+                      if b.division === 2
+                        div
+                          img(src="https://wiki.erepublik.com/images/e/eb/Icon_division_2.png", alt="division 2")
+                      if b.division === 1
+                        div
+                          img(src="https://wiki.erepublik.com/images/a/a9/Icon_division_1.png", alt="division 1")
+                      div= b.damage + " damage"
+
+          div(class="card thieves")
+             div(class="card-header text-dark", style={"background-color": "#f8f9fa", "border-bottom": "none" })= "List of tracked thieves"
+             div(class="card-body" style={"display": "flex", "gap": "1rem", "flex-wrap": "wrap", "flex-direction": "column"})                 
+                      each t in thieves
+                            div= t.name
+          //- div(class="card", style={"font-size": "18px"}) 
+          //-   div(class="card-header text-dark", style={"background-color": "#f8f9fa", "border-bottom": "none" })= "Thief not listed? Find by id!"
+          //-   div(class="card-body")
+          //-       div(style="display:flex")
+          //-         input(type="number", class="form-control" id="user" placer="Thief id")
+          //-         button(type="button" style="width: fit-content" class="btn btn-primary" id="search" value="Search")= "Search"
+          //-       div(id="battlesFound")= ""
