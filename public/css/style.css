@@ -162,4 +162,7 @@ td:nth-child(1) {
   .thieves {
     width: 100%;
   }
+  .damage {
+    width: 100px;
+  }
 }

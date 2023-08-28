@@ -13,11 +13,11 @@ html
   div(class="page")
 
     main
-      header(class="h3 bg-light text-dark")= "Do you also hate thieves?"
+      header(class="h3 bg-light text-dark")= "Do you also dislike thieves?"
       div(class="container-fluid root")
-          div(style="width: 100%;")       
+          div(style="width: 100%;")     
             if battles.length === 0 
-              div= "No thief has a bh/sh at this moment :( "
+              div(class="h2 text-center", style="padding: 1rem")= "No thief has a bh/sh at this moment :( "
             each t in battles
               if t.message != 0    
                 div(class="thief-container") 
@@ -28,20 +28,20 @@ html
                         a(href=b.link, class="text-primary")= "Battle " + b.id
                       if b.division === 11
                         div
-                          img(src="https://wiki.erepublik.com/images/b/b4/Icon_division_Airforce.png", alt="air")
+                          img(src="https://wiki.erepublik.com/images/8/8c/Icon_division_Airforce_blue.png", alt="air")
                       if b.division === 4
                         div
-                          img(src="https://wiki.erepublik.com/images/b/be/Icon_division_4.png", alt="division 4")  
+                          img(src="https://wiki.erepublik.com/images/4/49/Icon_division_4_blue.png", alt="division 4")  
                       if b.division === 3
                         div
-                          img(src="https://wiki.erepublik.com/images/5/5b/Icon_division_3.png", alt="division 3")
+                          img(src="https://wiki.erepublik.com/images/a/a6/Icon_division_3_blue.png", alt="division 3")
                       if b.division === 2
                         div
-                          img(src="https://wiki.erepublik.com/images/e/eb/Icon_division_2.png", alt="division 2")
+                          img(src="https://wiki.erepublik.com/images/c/c5/Icon_division_2_blue.png", alt="division 2")
                       if b.division === 1
                         div
-                          img(src="https://wiki.erepublik.com/images/a/a9/Icon_division_1.png", alt="division 1")
-                      div= b.damage + " damage"
+                          img(src="https://wiki.erepublik.com/images/e/e2/Icon_division_1_blue.png", alt="division 1")
+                      div(class="damage")= b.damage + " damage"
 
           div(class="card thieves")
              div(class="card-header text-dark", style={"background-color": "#f8f9fa", "border-bottom": "none" })= "List of tracked thieves"
