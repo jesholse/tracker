@@ -11,7 +11,6 @@ html
     script(src="js/bootstrap.js", defer) 
   body
   div(class="page")
-
     main
       header(class="h3 bg-light text-dark")= "Do you also dislike thieves?"
       div(class="container-fluid root")
@@ -48,10 +47,13 @@ html
              div(class="card-body" style={"display": "flex", "gap": "1rem", "flex-wrap": "wrap", "flex-direction": "column"})                 
                       each t in thieves
                             div= t.name
-          //- div(class="card", style={"font-size": "18px"}) 
-          //-   div(class="card-header text-dark", style={"background-color": "#f8f9fa", "border-bottom": "none" })= "Thief not listed? Find by id!"
-          //-   div(class="card-body")
-          //-       div(style="display:flex")
-          //-         input(type="number", class="form-control" id="user" placer="Thief id")
-          //-         button(type="button" style="width: fit-content" class="btn btn-primary" id="search" value="Search")= "Search"
-          //-       div(id="battlesFound")= ""
+             div(class="card" style="font-size: 18px")
+                div(class="card-header text-dark", style={"background-color": "#f8f9fa", "border-bottom": "none" })= "Find thief by id!"
+                div(class="card-body")
+                  div(style="display:flex")
+                    input(type="number", class="form-control" id="user" placer="Thief id")
+                    button(type="button" style="width: fit-content" class="btn btn-primary" id="search" value="Search")= "Search"
+                  div(id="battlesFound")= ""
+               
+
+
