@@ -32,8 +32,20 @@ const thieves = [
     id: 736381,
   },
   {
-    name: " Hormonek",
+    name: "Hormonek",
     id: 1203171,
+  },
+  {
+    name: "Kai ANATAS",
+    id: 9643779,
+  },
+  {
+    name: "COLOSOX",
+    id: 9437415,
+  },
+  {
+    name: "Rumple54",
+    id: 7627403,
   },
 ];
 
