@@ -47,6 +47,18 @@ const thieves = [
     name: "Rumple54",
     id: 7627403,
   },
+  {
+  id: 2198351,
+  name: "Derin Millet",
+  },
+  {
+  id: 9615508,
+  name: "Gunde Haugen",
+  },
+  {
+  id: 3967947,
+  name: "fotinos"
+  }
 ];
 
 const fetchBattles = async () => {
