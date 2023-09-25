@@ -58,6 +58,10 @@ const thieves = [
   {
   id: 3967947,
   name: "fotinos"
+  },
+  {
+  id: 7896400,
+  name: "CiupiliKa"
   }
 ];
 
