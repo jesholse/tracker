@@ -4,30 +4,6 @@ const axios = require("axios");
 
 const thieves = [
   {
-    name: "Bragge Schorsch",
-    id: 4572302,
-  },
-  {
-    name: "Rivaldo1914",
-    id: 5773972,
-  },
-  {
-    name: "Bielo Hatman",
-    id: 5705615,
-  },
-  {
-    name: "mihoc",
-    id: 4661553,
-  },
-  {
-    name: "Ivan Petrof",
-    id: 8400488,
-  },
-  {
-    name: "FLD1987",
-    id: 8527862,
-  },
-  {
     name: "Mixilarder",
     id: 736381,
   },
@@ -36,33 +12,18 @@ const thieves = [
     id: 1203171,
   },
   {
-    name: "Kai ANATAS",
-    id: 9643779,
+   name: "YurtsuzJohn",
+   id: 9357603,
   },
   {
-    name: "COLOSOX",
-    id: 9437415,
+   name: "Kalu Zemun",
+   id: 8373219,
   },
-  {
-    name: "Rumple54",
-    id: 7627403,
+    {
+   name: "Nemaanjaaa120",
+   id: 4423008,
   },
-  {
-  id: 2198351,
-  name: "Derin Millet",
-  },
-  {
-  id: 9615508,
-  name: "Gunde Haugen",
-  },
-  {
-  id: 3967947,
-  name: "fotinos"
-  },
-  {
-  id: 7896400,
-  name: "CiupiliKa"
-  }
+
 ];
 
 const fetchBattles = async () => {

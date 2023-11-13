@@ -3,7 +3,7 @@ let input = document.getElementById("battlesFound");
 const findUser = async (query) => {
   const targetBattles = [];
   input.innerHTML = "";
-  const response = await fetch("http://localhost:3001/api");
+  const response = await fetch("https://service.erepublik.tools/api/v2/battle");
   const battles = await response.json();
   if (response.ok) {
     for (let key in battles) {
