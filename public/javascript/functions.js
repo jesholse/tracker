@@ -3,7 +3,7 @@ let input = document.getElementById("battlesFound");
 const findUser = async (query) => {
   const targetBattles = [];
   input.innerHTML = "";
-  const response = await fetch("https://service.erepublik.tools/api/v2/battle");
+  const response = await fetch("/api");
   const battles = await response.json();
   if (response.ok) {
     for (let key in battles) {
@@ -33,7 +33,7 @@ const findUser = async (query) => {
     input.innerHTML += `<div style="margin-bottom: 0">No battles found</div>`;
   }
   targetBattles.map((battle) => {
-    input.innerHTML += `<div style="margin-top: 1rem; margin-bottom: 0"><a class="text-primary" href='${battle.link}'>Battle ${battle.id}</a></div>`;
+    input.innerHTML += `<div><a class="text-primary" href='${battle.link}'>Battle ${battle.id}</a></div>`;
   });
 };
 

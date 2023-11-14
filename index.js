@@ -23,14 +23,37 @@ const thieves = [
    name: "Nemaanjaaa120",
    id: 4423008,
   },
-
+  {
+    name: "Dennisv2",
+    id: 6719723,
+  }
 ];
 
-const fetchBattles = async () => {
-  const battles = [];
+app.set("view engine", "pug");
+app.listen(3001, (req, res) => {});
+app.use(express.static(__dirname + "/node_modules/bootstrap/dist"));
+app.use(express.static("public"));
+app.get("/", async (req, res) => {
+  const data = await fetchBattles();
+  res.status(200).render("index", {
+    title: "eRepublik thief tracker",
+    battles: data,
+    thieves: thieves,
+  });
+});
+
+app.get("/api", async (req, res) => {
   const { data } = await axios.get(
     "https://service.erepublik.tools/api/v2/battle"
   );
+  if (data) {
+    res.send(data.battleZones);
+  }
+});
+
+const fetchBattles = async () => {
+  const battles = [];
+  const { data } = await axios.get("https://service.erepublik.tools/api/v2/battle");
 
   thieves.map((thief) => {
     const t = {
@@ -67,25 +90,4 @@ const fetchBattles = async () => {
   return battles;
 };
 
-app.set("view engine", "pug");
-app.listen(3001, (req, res) => {});
-app.use(express.static(__dirname + "/node_modules/bootstrap/dist"));
-app.use(express.static("public"));
-app.get("/", async (req, res) => {
-  const data = await fetchBattles();
 
-  res.status(200).render("index", {
-    title: "eRepublik thief tracker",
-    battles: data,
-    thieves: thieves,
-  });
-});
-
-app.get("/api", async (req, res) => {
-  const { data } = await axios.get(
-    "https://service.erepublik.tools/api/v2/battle"
-  );
-  if (data) {
-    res.send(data.battleZones);
-  }
-});
