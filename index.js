@@ -4,28 +4,62 @@ const axios = require("axios");
 
 const thieves = [
   {
-    name: "Mixilarder",
-    id: 736381,
-  },
-  {
-    name: "Hormonek",
-    id: 1203171,
-  },
-  {
-   name: "YurtsuzJohn",
-   id: 9357603,
-  },
-  {
-   name: "Kalu Zemun",
-   id: 8373219,
-  },
-    {
-   name: "Nemaanjaaa120",
-   id: 4423008,
-  },
-  {
+    name: "YurtsuzJohn",
+    id: 9357603,
+  },{
+    name: "Kalu Zemun",
+    id: 8373219,
+  },{
+    name: "Nemaanjaaa120",
+    id: 4423008,
+  },{
     name: "Dennisv2",
     id: 6719723,
+  },{
+    name: "YellowBoss is Pig",
+    id: 4825703
+  },{
+    name: "MAHONI27",
+    id: 1211319
+  },{
+    name: "Ivan Nedelchev7",
+    id: 4228118
+  },{
+    name: "Shept",
+    id: 4656103
+  },{
+    name: "pirospaprika",
+    id: 1354135
+  },{
+    name: "YurtsuzJohn",
+    id: 9357603
+  },{
+    name: "The Last Aviator",
+    id: 2064778
+  },{
+    name: "Cristian Fontanella",
+    id: 6984822
+  },{
+    name: "RPI08",
+    id: 8439130
+  },{
+    name: "The.Special",
+    id: 5319508
+  },{
+    name: "lesnydziadek",
+    id: 4540388
+  },{
+    name: "Baron K",
+    id: 4362472
+  },{
+    name: "bandi99",
+    id: 4074730
+  },{
+    name: "M i r M i",
+    id: 1530055
+  },{
+   name: "waivann",
+   id: 5906702
   }
 ];
 
